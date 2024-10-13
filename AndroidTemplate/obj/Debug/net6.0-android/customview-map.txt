@@ -1,0 +1,2 @@
+resources;obj\Debug\net6.0-android\res\values\strings.xml
+string;obj\Debug\net6.0-android\res\values\strings.xml

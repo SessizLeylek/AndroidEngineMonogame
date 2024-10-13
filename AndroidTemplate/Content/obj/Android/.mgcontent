@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Android</Platform>
+  <Config />
+  <SourceFiles>
+    <File>D:/Visual Studio Projects/AndroidTemplate/AndroidTemplate/Content/Fonts/ConsoleFont.spritefont</File>
+    <File>D:/Visual Studio Projects/AndroidTemplate/AndroidTemplate/Content/template_sprites/template_circle.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

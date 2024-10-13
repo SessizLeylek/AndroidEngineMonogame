@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AndroidTemplate</name>
+    </assembly>
+    <members>
+        <member name="M:AndroidTemplate.GameManager.ReturnRealCoordinates(Microsoft.Xna.Framework.Vector2,System.Single)">
+            <summary>
+            Returns real coordinates of given in game coordinates
+            </summary>
+            <param name="inGameCoordinates">In Game Coordinates of Canvas with width 360 unit</param>
+            <param name="verticalAlign">Alignment; 0 is anchored to top, 2 is anchored to bottom</param>
+            <returns>Real Coordinates (with Screen width and height)</returns>
+        </member>
+        <member name="M:AndroidTemplate.GameOutputConsole.ConsolePrint(System.String)">
+            <summary>
+            Prints a text on output console
+            </summary>
+            <param name="textToBePrinted">Your text you want to print on the console</param>
+        </member>
+        <member name="M:AndroidTemplate.GameOutputConsole.GetConsoleOutput">
+            <summary>
+            Returns console output
+            </summary>
+            <returns>Console output with maximum of 64 lines</returns>
+        </member>
+        <member name="M:AndroidTemplate.GameOutputConsole.PrintSavedValue(System.String)">
+            <summary>
+            Prints saved value to the console
+            </summary>
+            <param name="valueKey">Key of the value to be printed. (@N all, $Key$Value edit)</param>
+        </member>
+        <member name="M:AndroidTemplate.InputDialog.ShowInputDialog(System.String,System.Action{System.String})">
+            <summary>
+            Creates and shows an input dialog
+            </summary>
+            <param name="title">Title of the dialog</param>
+            <param name="_returnFunction">Function to call when the input is entered</param>
+        </member>
+        <member name="M:AndroidTemplate.ProgressSaver.#ctor">
+            <summary>
+            For reading and saving progress
+            </summary>
+        </member>
+        <member name="M:AndroidTemplate.ProgressSaver.WriteProgress(System.String,System.String)">
+            <summary>
+            Writes progress information to the file
+            </summary>
+            <param name="fileName">Name of the file you want to write progress into</param>
+            <param name="progress">Content you want to write</param>
+        </member>
+        <member name="M:AndroidTemplate.ProgressSaver.ReadProgress(System.String)">
+            <summary>
+            Reads progress information from the file
+            </summary>
+            <param name="fileName">Name of the file you want to read</param>
+            <returns>Content of the file</returns>
+        </member>
+        <member name="M:AndroidTemplate.SceneManager.#ctor(AndroidTemplate.GameManager)">
+            <summary>
+            Manages the scenes
+            </summary>
+        </member>
+        <member name="M:AndroidTemplate.SceneManager.LoadScene(System.String)">
+            <summary>
+            Terminates the currently active scene and initializes the new one
+            </summary>
+            <param name="_sceneName">Name of the scene</param>
+        </member>
+        <member name="M:AndroidTemplate.SpriteProperties.#ctor(System.String,Microsoft.Xna.Framework.Vector2,System.Single,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Graphics.SpriteEffects,System.Single,AndroidTemplate.SpriteProperties.EaseMethod)">
+            <summary>
+            Stores the properties of a sprite
+            </summary>
+            <param name="textureName">Name of the texture</param>
+            <param name="position">Position of the sprite where width of a canvas is 360</param>
+            <param name="rotation">Rotation of the sprite in angles</param>
+            <param name="scale">Scale of the sprite</param>
+            <param name="boundaries">Upper left corner and the sizes of the sprite</param>
+            <param name="origin">Origin point of the sprite. (0,0) upper left, (1, 1) bottom right</param>
+            <param name="color">Color of the sprite, white is default</param>
+            <param name="spriteEffect">Flipping of the sprite; horizontal, vertical or none</param>
+            <param name="frameDuration">(Animations only) How long this sprite will be shown, in seconds</param>
+            <param name="easeMethod">(Animations only) How the transition will be</param>
+        </member>
+        <member name="M:AndroidTemplate.StaticOperations.IsVector2Inside(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Checks if a given point is inside a region between two points
+            </summary>
+            <param name="regionCorner0">Any corner of the region</param>
+            <param name="regionCorner1">Opposite corner of the region</param>
+            <param name="subject">Point to check if it is inside</param>
+        </member>
+        <member name="M:AndroidTemplate.StaticOperations.IsVector3Inside(Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3,Microsoft.Xna.Framework.Vector3)">
+            <summary>
+            Checks if a given point is inside a region between two points
+            </summary>
+            <param name="regionCorner0">Any corner of the region</param>
+            <param name="regionCorner1">Opposite corner of the region</param>
+            <param name="subject">Point to check if it is inside</param>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputDrag.#ctor(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)">
+            <summary>
+            Stores the information of current drag input
+            </summary>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputHold.#ctor(Microsoft.Xna.Framework.Vector2,System.Single)">
+            <summary>
+            Stores the information of current hold
+            </summary>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputManager.GetState">
+            <summary>
+            Returns the current state of touch input
+            </summary>
+            <returns>Drag, Hold, Swipe or Tap</returns>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputManager.TimesTouchedInsideRegion(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Returns how many times the user touched inside the region
+            </summary>
+            <param name="regionCorner0">A corner of the region (in real coordinates)</param>
+            <param name="regionCorner1">Opposite corner of the region (in real coordinates)</param>
+            <returns>Times touched</returns>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputManager.TimesTouchedInsideCircle(Microsoft.Xna.Framework.Vector2,System.Single)">
+            <summary>
+            Returns how many times the user touched inside a circle with given values
+            </summary>
+            <param name="circleCenter">Center of the circle (in real coordinates)</param>
+            <param name="circleRadius">Radius of the circle (in real coordinates)</param>
+            <returns>Times touched</returns>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputManager.DurationHoldingInsideRegion(Microsoft.Xna.Framework.Vector2,System.Single)">
+            <summary>
+            Returns how long the user is touching inside a circle given values
+            </summary>
+            <param name="circleCenter">Center of the circle (in real coordinates)</param>
+            <param name="circleRadius">Radius of the circle (in real coordinates)</param>
+            <returns>Duration of touching in seconds</returns>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputManager.DurationHoldingInsideRegion(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Returns how long the user is touching inside the region
+            </summary>
+            <param name="regionCorner0">A corner of the region (in real coordinates)</param>
+            <param name="regionCorner1">Opposite corner of the region (in real coordinates)</param>
+            <returns>Duration of touching in seconds</returns>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputManager.DidUserStartedTouching">
+            <summary>
+            Did user started touching in this frame
+            </summary>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputManager.DidUserStoppedTouching">
+            <summary>
+            Did user stopped touching in this frame
+            </summary>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputManager.TouchPosition">
+            <summary>
+            Returns current touch position in real coordinates
+            </summary>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputSwipe.#ctor(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)">
+            <summary>
+            Stores the information of recent swipe
+            </summary>
+        </member>
+        <member name="M:AndroidTemplate.TouchInputTap.#ctor(Microsoft.Xna.Framework.Vector2,System.Int32)">
+            <summary>
+            Stores the information of recent tap
+            </summary>
+        </member>
+    </members>
+</doc>
